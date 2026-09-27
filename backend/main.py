@@ -10,7 +10,7 @@ MAX_MB = 15
 app = FastAPI(title="AI StudyOS")
 app.add_middleware(auth.AuthMiddleware)  # added first so CORS wraps it (401s keep CORS headers)
 app.include_router(auth.router)
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173"], allow_methods=["*"], allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173","https://ai-studyos-1.onrender.com"], allow_methods=["*"], allow_headers=["*"])
 
 @app.on_event("startup")
 def _s(): db.init()
