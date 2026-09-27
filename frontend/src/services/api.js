@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:8000'
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 const MSG = { 404: 'Not found.', 413: 'File is too large. Maximum size is 15 MB.', 415: 'Please upload a valid PDF.',
   422: 'This PDF could not be processed. Scanned PDFs may not be supported.', 503: 'AI service is unavailable. Check your API key or try again.' }
 async function req(path, opts) {
