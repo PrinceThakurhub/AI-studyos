@@ -6,4 +6,4 @@ python-dotenv
 google-auth
 requests
 pyjwt
-google-genai
+groq
